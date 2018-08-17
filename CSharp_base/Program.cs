@@ -6,7 +6,15 @@ namespace CSharp_base
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            Pliki.Quiz();
+            //Odc6_case.Miesiace();
+            //Tablice.Fibb();
+            //Tablice.Tablica_jednowymiarowa();
+
+
+
+            Console.ReadKey();
         }
     }
 }
