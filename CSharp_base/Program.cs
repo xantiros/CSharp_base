@@ -7,7 +7,7 @@ namespace CSharp_base
         static void Main(string[] args)
         {
 
-            Lancuchy.Temp();
+            Function_programing.Temp();
             //Pliki.Quiz();
             //Odc6_case.Miesiace();
             //Tablice.Fibb();
