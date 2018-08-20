@@ -7,12 +7,11 @@ namespace CSharp_base
         static void Main(string[] args)
         {
 
-            Pliki.Quiz();
+            Lancuchy.Temp();
+            //Pliki.Quiz();
             //Odc6_case.Miesiace();
             //Tablice.Fibb();
             //Tablice.Tablica_jednowymiarowa();
-
-
 
             Console.ReadKey();
         }
