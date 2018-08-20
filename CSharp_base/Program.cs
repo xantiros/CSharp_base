@@ -7,7 +7,8 @@ namespace CSharp_base
         static void Main(string[] args)
         {
 
-            Pointers.Test();
+            Excercises.FindMax();
+            //Pointers.Test();
             //Function_programing.Temp();
             //Pliki.Quiz();
             //Odc6_case.Miesiace();
