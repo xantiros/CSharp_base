@@ -7,6 +7,14 @@ namespace CSharp_base
 {
     static class Excercises
     {
+
+        public static int Fibonaci(int a) // 1 1 2 3 5 
+        {
+            if (a == 0) return 0;
+            if (a == 1) return 1; //1
+            else return Fibonaci(a - 2) + Fibonaci(a - 1);
+        }
+
         public static void ID626()
         {
             int m = Convert.ToInt32(Console.ReadLine());
