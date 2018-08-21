@@ -7,6 +7,53 @@ namespace CSharp_base
 {
     static class Excercises
     {
+
+
+
+
+
+        public static void Silnia_vs_Silnia2()
+        {
+            int[] t = new int[int.MaxValue/2];
+            for (int i = 0; i < t.Length; i++)
+            {
+                t[i] = i;
+            }
+
+            DateTime time_start = DateTime.Now;
+            Console.WriteLine("Start: " + time_start.Millisecond);
+
+            Console.WriteLine(Silnia(13));
+
+            DateTime time_end = DateTime.Now;
+            Console.WriteLine("End: " + time_end.Millisecond);
+            Console.WriteLine("Time: " + (time_end.Millisecond - time_start.Millisecond));
+
+            for (int i = 0; i < t.Length; i++)
+            {
+                t[i] = i;
+            }
+
+            time_start = DateTime.Now;
+            Console.WriteLine("Start: " + time_start.Millisecond);
+
+            Console.WriteLine(Silnia2(13));
+
+            time_end = DateTime.Now;
+            Console.WriteLine("End: " + time_end.Millisecond);
+            Console.WriteLine("Time: " + (time_end.Millisecond - time_start.Millisecond));
+        }
+
+        public static int Silnia2(int a)
+        {
+            int suma = 1;
+            for (int i = 1; i <= a; i++)
+            {
+                suma *= i;
+            }
+            return suma;
+        }
+
         public static int Silnia(int a)
         {
             if (a == 1) return 1;
@@ -25,6 +72,7 @@ namespace CSharp_base
             if (a == 1) return 1; //1
             else return Fibonaci(a - 2) + Fibonaci(a - 1);
         }
+
 
         public static void ID626()
         {
