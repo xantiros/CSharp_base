@@ -7,7 +7,8 @@ namespace CSharp_base
         static void Main(string[] args)
         {
 
-            Excercises.Find();
+            Excercises.ID626();
+            //Excercises.Find();
             //Pointers.Test();
             //Function_programing.Temp();
             //Pliki.Quiz();
