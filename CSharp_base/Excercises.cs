@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace CSharp_base
@@ -15,14 +16,15 @@ namespace CSharp_base
             for (int i = 0; i < tab.Length; i++)
             {
                 tab[i] = Convert.ToDecimal(Console.ReadLine());
-                suma = +tab[i];
+                suma += tab[i];
             }
             srednia = suma / tab.Length;
 
-            tab.
-
-
-
+            var nearest = tab.OrderBy(v => Math.Abs((decimal)v - srednia)).First();
+            //1, 2, 3, 4, 5 - srednia 3 
+            //-2, -1, 0, 1, 5
+            Console.WriteLine(srednia);
+            Console.WriteLine(nearest);
 
         }
 

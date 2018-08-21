@@ -7,7 +7,7 @@ namespace CSharp_base
         static void Main(string[] args)
         {
 
-            Excercises.FindMax();
+            Excercises.Find();
             //Pointers.Test();
             //Function_programing.Temp();
             //Pliki.Quiz();
