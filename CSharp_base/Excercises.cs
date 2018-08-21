@@ -7,11 +7,7 @@ namespace CSharp_base
 {
     static class Excercises
     {
-
-
-
-
-
+    
         public static void Silnia_vs_Silnia2()
         {
             int[] t = new int[int.MaxValue/2];
