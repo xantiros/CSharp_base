@@ -7,6 +7,11 @@ namespace CSharp_base
 {
     static class Excercises
     {
+        public static int potega(int p, int w) //3`4 3*3*3*3
+        {
+            if (w == 0) return 1;
+            else return potega(p, w - 1) * p;
+        }
 
         public static int Fibonaci(int a) // 1 1 2 3 5 
         {

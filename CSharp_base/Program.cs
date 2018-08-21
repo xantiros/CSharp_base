@@ -6,7 +6,7 @@ namespace CSharp_base
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Excercises.Fibonaci(19)); 
+            Console.WriteLine(Excercises.potega(3, 4)); 
             //Excercises.ID626();
             //Excercises.Find();
             //Pointers.Test();
