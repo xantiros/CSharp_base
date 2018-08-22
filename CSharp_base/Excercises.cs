@@ -69,6 +69,49 @@ namespace CSharp_base
             else return Fibonaci(a - 2) + Fibonaci(a - 1);
         }
 
+        public static void ID438()
+        {
+            int n = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < n; i++)
+            {
+
+                int num = Convert.ToInt32(Console.ReadLine());
+                int primary = 1;
+                if (num == 1) primary = 0;
+                for (int j = 2; j < num-1; j++)
+                {
+                    if (num % j == 0)
+                    {
+                        primary = 0;
+                        break;
+                    }
+                    else
+                        primary = 1;
+                }
+                if (primary == 1)
+                    Console.WriteLine("TAK");
+                else
+                    Console.WriteLine("NIE");
+            }
+        }
+
+        public static void ID549()
+        {
+            int t = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < t; i++)
+            {
+                int n = Convert.ToInt32(Console.ReadLine());
+                string text = Console.ReadLine();
+                string[] numbers = text.Split(' ');
+                int suma = 0;
+                foreach (var num in numbers)
+                {
+                    suma += Convert.ToInt32(num);
+                }
+                Console.WriteLine(suma);
+            }
+        }
 
         public static void ID626()
         {
