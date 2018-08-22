@@ -6,7 +6,7 @@ namespace CSharp_base
     {
         static void Main(string[] args)
         {
-            Excercises.ID438();
+            DataStructure.BinaryTree();
             //SortAlgorithms.Test();
             //Excercises.Silnia_vs_Silnia2();
             //Console.WriteLine(Excercises.potega(3, 4)); 
