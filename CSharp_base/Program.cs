@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSharp_base.Objects;
+using System;
 
 namespace CSharp_base
 {
@@ -6,7 +7,10 @@ namespace CSharp_base
     {
         static void Main(string[] args)
         {
-            MathFunctions.Ogame();
+            Car c1 = new Car("audi", "a8", 1999, 200032);
+            c1.Show();
+
+            //MathFunctions.Ogame();
             //DataStructure.BinaryTree();
             //SortAlgorithms.Test();
             //Excercises.Silnia_vs_Silnia2();
