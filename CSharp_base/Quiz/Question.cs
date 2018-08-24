@@ -21,7 +21,7 @@ namespace CSharp_base.Quiz
 
             if (!File.Exists(path))
             {
-                Console.WriteLine("blad");
+                throw new Exception("File doesn't exits.");
             }
 
             int start_line= (Number - 1) * 6 + 1;
