@@ -11,7 +11,7 @@ namespace CSharp_base
             string temat, nick, line, odpowiedz;
             int counter = 1, nr_pytania = 0, punkty = 0, count = 0;
 
-            string path = @"C:\Users\bklima\source\repos\CSharp_base\CSharp_base\quiz.txt";
+            string path = @"C:\Users\bklima\source\repos\CSharp_base\CSharp_base\\Fundamentials\quiz.txt";
 
 
             if(!File.Exists(path))
@@ -25,7 +25,7 @@ namespace CSharp_base
                 count++;
             }
 
-            int max_questions = (count - 2) / 6;
+            int max_questions = count/ 6;
 
             string[] tresc = new string[max_questions], odpA = new string[max_questions], odpB = new string[max_questions],
                 odpC = new string[max_questions], odpD = new string[max_questions], poprawna = new string[max_questions];
