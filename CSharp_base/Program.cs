@@ -1,4 +1,5 @@
-﻿using CSharp_base.Objects;
+﻿using CSharp_base.Fundamentials;
+using CSharp_base.Objects;
 using CSharp_base.Quiz;
 using System;
 using System.Collections.Generic;
@@ -9,28 +10,9 @@ namespace CSharp_base
     {
         static void Main(string[] args)
         {
-            var questions = new List<Question>()
-            {
-                new Question(),
-                new Question(),
-                new Question(),
-                new Question(),
-                new Question(),
-                new Question()
-            };
 
-            int i = 1, suma = 0;
-            foreach (var q in questions)
-            {
-                q.Question_number(i);
-                q.Read();
-                q.Ask();
-                q.Check();
-                i++;
-                suma += q.Points;
-            }
-            Console.WriteLine("Koniec, punktow: " + suma);
-
+            Tmp.Event();
+            //Tmp.Question();
             // Question question = new Question();
             //question.Question_number(2);
             //question.Read();
