@@ -21,6 +21,5 @@ namespace CSharp_base.Objects
         {
             Console.WriteLine($"{Brand}, {Model}, {Year}, {Mileage}");
         }
-
     }
 }

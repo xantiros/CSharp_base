@@ -11,7 +11,7 @@ namespace CSharp_base
         static void Main(string[] args)
         {
 
-            Tmp.Event();
+            Tmp.Point();
             //Tmp.Question();
             // Question question = new Question();
             //question.Question_number(2);
