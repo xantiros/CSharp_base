@@ -2,13 +2,37 @@
 
 namespace CSharp_base.Objects
 {
-    internal class Point
+    public class Point
+    {
+        public string Name { get; private set; }
+        public float X { get; private set; }
+        public float Y { get; private set; }
+
+        public Point(string name = "A", float x = 0, float y = 0)
+        {
+            Name = name;
+            X = x;
+            Y = y;
+        }
+        public void Load()
+        {
+            Name = Console.ReadLine();
+            X = Convert.ToSingle(Console.ReadLine());
+            Y = Convert.ToSingle(Console.ReadLine());
+        }
+        public void Show()
+        {
+            Console.WriteLine($"{Name}, {X}, {Y}");
+        }
+    }
+
+    internal class Point2
     {
         protected internal string Name { get; set; }
         protected internal float X { get; set; }
         protected internal float Y { get; set; }
 
-        protected internal Point(string name = "A", float x = 0, float y = 0)
+        protected internal Point2(string name = "A", float x = 0, float y = 0)
         {
             Name = name;
             X = x;
@@ -19,6 +43,10 @@ namespace CSharp_base.Objects
             Name = Console.ReadLine();
             X = Convert.ToSingle(Console.ReadLine());
             Y = Convert.ToSingle(Console.ReadLine());
+        }
+        protected internal void Show()
+        {
+            Console.WriteLine($"{Name}, {X}, {Y}");
         }
     }
     internal class Rectangle

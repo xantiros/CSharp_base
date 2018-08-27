@@ -9,6 +9,14 @@ namespace CSharp_base.Fundamentials
     {
         public static void Point()
         {
+            Circle circle = new Circle("Abc", 5, 5, 5);
+            circle.Show();
+            Ball ball = new Ball();
+            ball.Show();
+        }
+
+        public static void Point2()
+        {
             Point p1 = new Point("A", 3, 1);
 
             Rectangle r1 = new Rectangle("Rectangle", 0, 0, 6, 4);
