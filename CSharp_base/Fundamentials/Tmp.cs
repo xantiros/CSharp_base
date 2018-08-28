@@ -7,6 +7,31 @@ namespace CSharp_base.Fundamentials
 {
     public static class Tmp
     {
+        public static void Test()
+        {
+            var shapes = new List<Shape>
+            {
+                new Circle2(6),
+                new Circle2(1),
+                new Square(5),
+                new Circle2(2)
+            };
+            foreach (var item in shapes)
+            {
+                item.CalculateField();
+                //Calculate(item); //z c++
+            }
+
+            //Circle2 circle = new Circle2(5);
+            //Square square = new Square(5);
+            //circle.CalculateField();
+            //square.CalculateField();
+        }
+        private static void Calculate(Shape shape)
+        {
+            shape.CalculateField();
+        }
+
         public static void Point()
         {
             Circle circle = new Circle("Abc", 5, 5, 5);
