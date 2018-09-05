@@ -5,7 +5,16 @@ namespace CSharp_base
 {
     static class Excercises
     {
-    
+        public static void ID1828()
+        {
+            int x = Convert.ToInt32(Console.ReadLine());
+            int y = Convert.ToInt32(Console.ReadLine());
+            int z = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine(x+y+z);
+        }
+
+
         public static void Silnia_vs_Silnia2()
         {
             int[] t = new int[int.MaxValue/2];
