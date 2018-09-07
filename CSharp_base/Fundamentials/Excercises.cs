@@ -1,10 +1,34 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace CSharp_base
 {
     static class Excercises
     {
+        public static void ID606()
+        {
+            int t = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < t; i++)
+            {
+                List<int> tab = new List<int>();
+                string text = Console.ReadLine();
+                string[] numbers = text.Split(' ');
+                foreach (string s in numbers)
+                {
+                    tab.Add(Convert.ToInt32(s));
+                }
+                tab.Remove(tab[0]);
+                tab.Reverse();
+                foreach (var item in tab)
+                {
+                    Console.Write(item + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+
         public static void ID1502()
         {
             string text = Console.ReadLine();
