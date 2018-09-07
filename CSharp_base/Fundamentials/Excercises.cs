@@ -5,6 +5,20 @@ namespace CSharp_base
 {
     static class Excercises
     {
+        public static void ID1502()
+        {
+            string text = Console.ReadLine();
+            int[] tab = new int[4];
+            int i = 0;
+            string[] numbers = text.Split(' ');
+            foreach (string s in numbers)
+            {
+                tab[i] = Convert.ToInt32(s);
+                i++;
+            }
+            Console.WriteLine((tab[0]*tab[1])+(tab[2]*tab[3]));
+        }
+
         public static void ID601()
         {
             int t = Convert.ToInt32(Console.ReadLine());
