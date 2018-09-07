@@ -5,6 +5,35 @@ namespace CSharp_base
 {
     static class Excercises
     {
+        public static void ID601()
+        {
+            int t = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < t; i++)
+            {
+                int[] tab = new int[2];
+                int jj = 0;
+                string text = Console.ReadLine();
+                string[] numbers = text.Split(' ');
+                foreach (string s in numbers)
+                {
+                    tab[jj] = Convert.ToInt32(s);
+                    jj++;
+                }
+                Console.WriteLine(Nwd(tab[0], tab[1])); 
+            }
+        }
+        static int Nwd(int a, int b)
+        {
+            while (b != 0)
+            {
+                int c = a % b;
+                a = b;
+                b = c;
+            }
+            return a;
+        }
+
         public static void ID496()
         {
             int x = Convert.ToInt32(Console.ReadLine());

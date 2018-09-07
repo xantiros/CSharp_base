@@ -11,7 +11,7 @@ namespace CSharp_base
         static void Main(string[] args)
         {
 
-            Excercises.ID496();
+            Excercises.ID601();
             //Tmp.Test();
             //Tmp.Question();
             // Question question = new Question();
