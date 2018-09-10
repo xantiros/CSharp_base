@@ -6,6 +6,58 @@ namespace CSharp_base
 {
     static class Excercises
     {
+        public static void ID499()
+        {
+            int t = Convert.ToInt16(Console.ReadLine());
+            List<ulong> tab = new List<ulong>();
+            if (t > 10) t = 10;
+            for (int i = 0; i < t; i++)
+            {
+                string text = Console.ReadLine();
+                string[] numbers = text.Split(' ');
+                foreach (string s in numbers)
+                {
+                    tab.Add(ulong.Parse(s));
+                }
+                if (tab[0] == 1) Console.WriteLine(1);
+                else if (tab[1] == 0) Console.WriteLine(1);
+                else if (tab[0] == 0) Console.WriteLine(0);
+                else
+                {
+                    int a = Convert.ToInt32(tab[0] % 10);
+                    int b = Convert.ToInt32(tab[1] % 10);
+                    if(a == 0 & b != 0)
+                    {
+                        Console.WriteLine(0);
+                    }
+                    if (a != 0 & b == 0)
+                    {
+                        int x = a;
+                        for (int j = 1; j < 10; j++)
+                        {
+                            x *= x;
+                        }
+                        Console.WriteLine(x % 10);
+                    }
+                    else if(a==0 & b == 0)
+                    {
+                        Console.WriteLine(0);
+                    }
+                    else
+                    {
+                        int x = a;
+                        for (int j = 1; j < b; j++)
+                        {
+                            x *= x;
+                        }
+                        Console.WriteLine(x % 10);
+                    }
+
+                }
+                tab.Clear();
+            }         
+        }
+
         public static void ID606()
         {
             int t = Convert.ToInt32(Console.ReadLine());
