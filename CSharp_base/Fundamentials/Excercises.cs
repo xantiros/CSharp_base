@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace CSharp_base
 {
-    static class Excercises
+    public static class Excercises
     {
         public static void ID499()
         {
@@ -56,6 +56,80 @@ namespace CSharp_base
                 }
                 tab.Clear();
             }         
+        }
+        public static int ID499_Tests(ulong num0, ulong num1)
+        {
+            if (num0 == 1) return 1;
+            else if (num1 == 0) return 1;
+            else if (num0 == 0) return 0;
+            else
+            {
+                double a = Convert.ToDouble(num0 % 10);
+                double b = Convert.ToDouble(num1 % 10);
+                if (a == 0 & b != 0)
+                {
+                    return 0;
+                }
+                else if (a != 0 & b == 0)
+                {
+                    double x = Math.Pow(a, b);
+                    //int x = a;
+                    //for (int j = 1; j < 10; j++)
+                    //{
+                    //    x *= a;
+                    //}
+                    return (int)x % 10;
+                }
+                else if (a == 0 & b == 0)
+                {
+                    return 0;
+                }
+                else if (a == 1) return 1;
+                else if (a == 2)
+                {
+                    ulong mod = num1 % 4;
+                    if (mod == 1) return 2;
+                    else if (mod == 2) return 4;
+                    else if (mod == 3) return 8;
+                    else return 6; //(mod == 0) 
+                    //else return 6; //if (mod == 4) 
+                }
+                else if (a == 3)
+                {
+                    ulong mod = num1 % 4;
+                    if (mod == 0) return 1;
+                    else if (mod == 1) return 3;
+                    else if (mod == 2) return 9;
+                    else return 7; //(mod == 3)
+                }
+                else if (a == 6) return 6;
+                else if (a == 8)
+                {
+                    ulong mod = num1 % 4;
+                    if (mod == 0) return 1;
+                    else if (mod == 1) return 8;
+                    else if (mod == 2) return 4;
+                    else if (mod == 3) return 2;
+                    else return 6; //if (mod == 4)
+                }
+                else if (a == 8)
+                {
+                    ulong mod = num1 % 2;
+                    if (mod == 0) return 1;
+                    else if (mod == 1) return 9;
+                    else return 1; //if (mod == 2)
+                }
+                else
+                {
+                    double x = Math.Pow(a, b);
+                    //int x = a;
+                    //for (int j = 1; j < b; j++)
+                    //{
+                    //    x *= a;
+                    //}
+                    return (int)x % 10;
+                }
+            }
         }
 
         public static void ID606()
