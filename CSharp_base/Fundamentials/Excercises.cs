@@ -24,40 +24,75 @@ namespace CSharp_base
                 else if (tab[0] == 0) Console.WriteLine(0);
                 else
                 {
-                    int a = Convert.ToInt32(tab[0] % 10);
-                    int b = Convert.ToInt32(tab[1] % 10);
-                    if(a == 0 & b != 0)
+                    double a = Convert.ToDouble(tab[0] % 10);
+                    double b = Convert.ToDouble(tab[1] % 10);
+                    if (a == 0 & b != 0)
                     {
                         Console.WriteLine(0);
                     }
-                    if (a != 0 & b == 0)
+                    else if (a != 0 & b == 0)
                     {
-                        int x = a;
-                        for (int j = 1; j < 10; j++)
-                        {
-                            x *= x;
-                        }
-                        Console.WriteLine(x % 10);
+                        double x = Math.Pow(a, b);
+                        //int x = a;
+                        //for (int j = 1; j < 10; j++)
+                        //{
+                        //    x *= a;
+                        //}
+                        Console.WriteLine((int)x % 10); 
                     }
-                    else if(a==0 & b == 0)
+                    else if (a == 0 & b == 0)
                     {
                         Console.WriteLine(0);
+                    }
+                    else if (a == 1) Console.WriteLine(1);
+                    else if (a == 2)
+                    {
+                        ulong mod = tab[1] % 4;
+                        if (mod == 1) Console.WriteLine(2); 
+                        else if (mod == 2) Console.WriteLine(4);
+                        else if (mod == 3) Console.WriteLine(8);
+                        else Console.WriteLine(6); 
+                    }
+                    else if (a == 3)
+                    {
+                        ulong mod = tab[1] % 4;
+                        if (mod == 0) Console.WriteLine(1);
+                        else if (mod == 1) Console.WriteLine(3);
+                        else if (mod == 2) Console.WriteLine(9);
+                        else Console.WriteLine(7);
+                    }
+                    else if (a == 6) Console.WriteLine(6);
+                    else if (a == 8)
+                    {
+                        ulong mod = tab[1] % 4;
+                        if (mod == 0) Console.WriteLine(1);
+                        else if (mod == 1) Console.WriteLine(8);
+                        else if (mod == 2) Console.WriteLine(4);
+                        else if (mod == 3) Console.WriteLine(2);
+                        else Console.WriteLine(6);
+                    }
+                    else if (a == 8)
+                    {
+                        ulong mod = tab[1] % 2;
+                        if (mod == 0) Console.WriteLine(1);
+                        else if (mod == 1) Console.WriteLine(9);
+                        else Console.WriteLine(1);//if (mod == 2)
                     }
                     else
                     {
-                        int x = a;
-                        for (int j = 1; j < b; j++)
-                        {
-                            x *= x;
-                        }
-                        Console.WriteLine(x % 10);
+                        double x = Math.Pow(a, b);
+                        //int x = a;
+                        //for (int j = 1; j < b; j++)
+                        //{
+                        //    x *= a;
+                        //}
+                        Console.WriteLine((int)x % 10); 
                     }
-
                 }
                 tab.Clear();
             }         
         }
-        public static int ID499_Tests(ulong num0, ulong num1)
+        public static int ID499_Tests2(ulong num0, ulong num1)
         {
             if (num0 == 1) return 1;
             else if (num1 == 0) return 1;
@@ -129,6 +164,53 @@ namespace CSharp_base
                     //}
                     return (int)x % 10;
                 }
+            }
+        }
+        public static int ID499_Tests(ulong num0, ulong num1)
+        {
+            int[,] tab = new int[10,4] {
+            {0, 0, 0, 0},
+            {1, 1, 1, 1},
+            {6, 2, 4, 8},
+            {1, 3, 9, 7},
+            {6, 4, 6, 4},
+            {5, 5, 5, 5},
+            {6, 6, 6, 6},
+            {1, 7, 9, 3},
+            {6, 8, 3, 2},
+            {1, 9, 1, 9}
+            };
+
+            return tab[num0%10, num1%4];
+
+        }
+        public static void ID499_2()
+        {
+            int t = Convert.ToInt16(Console.ReadLine());
+            int[,] tab = new int[10, 4] {
+            {0, 0, 0, 0},
+            {1, 1, 1, 1},
+            {6, 2, 4, 8},
+            {1, 3, 9, 7},
+            {6, 4, 6, 4},
+            {5, 5, 5, 5},
+            {6, 6, 6, 6},
+            {1, 7, 9, 3},
+            {6, 8, 3, 2},
+            {1, 9, 1, 9}
+            };
+            List<ulong> tab2 = new List<ulong>();
+            if (t > 10) t = 10;
+            for (int i = 0; i < t; i++)
+            {
+                string text = Console.ReadLine();
+                string[] numbers = text.Split(' ');
+                foreach (string s in numbers)
+                {
+                    tab2.Add(ulong.Parse(s));
+                }
+                Console.WriteLine(tab[tab2[0] % 10, tab2[1] % 4]);
+                tab2.Clear();
             }
         }
 
