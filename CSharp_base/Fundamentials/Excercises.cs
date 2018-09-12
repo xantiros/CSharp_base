@@ -6,6 +6,42 @@ namespace CSharp_base
 {
     public static class Excercises
     {
+        public static void ID506()
+        {
+            int t = Convert.ToInt16(Console.ReadLine());
+            for (int i = 0; i < t; i++)
+            {
+                int[] c = new int[char.MaxValue];
+                string text = Console.ReadLine();
+                string new_text = null;
+                char last_character = ' ';
+                int count_char = 2;
+                foreach (char s in text)
+                {                                   //aaaabbb
+                    c[s]++;
+                    if (c[s] > 2) count_char++; //od 3 liczymy
+                    //else count_char = 2;
+                    if (s != last_character && count_char > 2)
+                    {
+                        new_text = new_text + (char)last_character + count_char;
+                        count_char = 2;
+                    }
+                    last_character = s;
+                }
+                if (count_char > 2)
+                    new_text = new_text + (char)last_character + count_char;
+                else new_text = new_text + (char)last_character;
+                Console.WriteLine(new_text);
+                //for (int j = 0; j < char.MaxValue; j++)
+                //{
+                //    if (c[j] > 0 && char.IsLetter((char)j))
+                //    {
+                //        Console.WriteLine("Letter: {0}  Frequency: {1}",(char)j, c[j]);
+                //    }
+                //}
+            }
+        }
+
         public static void ID499()
         {
             int t = Convert.ToInt16(Console.ReadLine());

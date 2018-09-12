@@ -10,7 +10,8 @@ namespace CSharp_base
     {
         static void Main(string[] args)
         {
-            Excercises.ID499_Tests(3, 435435436);
+            Excercises.ID506();
+            //Excercises.ID499_Tests(3, 435435436);
             //Excercises.ID499();
             //Tmp.Test();
             //Tmp.Question();
