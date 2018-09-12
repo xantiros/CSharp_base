@@ -15,22 +15,33 @@ namespace CSharp_base
                 string text = Console.ReadLine();
                 string new_text = null;
                 char last_character = ' ';
-                int count_char = 2;
-                foreach (char s in text)
+                int count_char = 0;
+                foreach (char s in text) 
                 {                                   //aaaabbb
                     c[s]++;
-                    if (c[s] > 2) count_char++; //od 3 liczymy
-                    //else count_char = 2;
                     if (s != last_character && count_char > 2)
                     {
-                        new_text = new_text + (char)last_character + count_char;
-                        count_char = 2;
+                        new_text = new_text + last_character + count_char;
+                        count_char = 0;
                     }
+                    else if (s != last_character && count_char == 2)
+                    {
+                        new_text = new_text + last_character + last_character;
+                        count_char = 0;
+                    }
+                    else if (s != last_character && count_char == 1) //aabaa 
+                    {
+                        new_text = new_text + last_character;
+                        count_char = 0;
+                    }
+                    count_char++;
                     last_character = s;
                 }
                 if (count_char > 2)
-                    new_text = new_text + (char)last_character + count_char;
-                else new_text = new_text + (char)last_character;
+                    new_text = new_text + last_character + count_char;
+                else if(count_char == 2)
+                    new_text = new_text + last_character + last_character;
+                else new_text = new_text + last_character;
                 Console.WriteLine(new_text);
                 //for (int j = 0; j < char.MaxValue; j++)
                 //{
