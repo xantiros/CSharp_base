@@ -6,6 +6,27 @@ namespace CSharp_base
 {
     public static class Excercises
     {
+        public static void ID522()
+        {
+            int t = Convert.ToInt16(Console.ReadLine());
+            for (int i = 0; i < t; i++)
+            {
+                List<int> tab = new List<int>();
+                string text = Console.ReadLine();
+                string[] numbers = text.Split(' ');
+                foreach (string s in numbers)
+                {
+                    tab.Add(Convert.ToInt32(s));
+                }
+                if (tab[0] < 10 || tab[0] > 30 || tab[1] < 10 || tab[1] > 30) Console.WriteLine(0);
+                else if (tab[0] == tab[1]) Console.WriteLine(tab[0]);
+                else
+                {
+                    Console.WriteLine(tab[0] * tab[1] / Nwd(tab[0], tab[1]));
+                }
+            }
+        }
+
         public static void ID506()
         {
             int t = Convert.ToInt16(Console.ReadLine());
