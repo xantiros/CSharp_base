@@ -1,11 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace CSharp_base
 {
     public static class Excercises
     {
+        public static void ID968()
+        {
+            int suma = 0;
+            string line;
+            TextReader textReader = Console.In;
+
+            while((line = textReader.ReadLine()) != null)
+            {
+                suma += Convert.ToInt32(line);
+                Console.WriteLine(suma);
+            }
+        }
+
         public static void ID522()
         {
             int t = Convert.ToInt16(Console.ReadLine());
