@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 
@@ -7,6 +8,53 @@ namespace CSharp_base
 {
     public static class Excercises
     {
+        public static void ID997()
+        {
+            string line;
+            TextReader textReader = Console.In;
+
+            while ((line = textReader.ReadLine()) != null)
+            {
+                List<string> tab = new List<string>();
+                string text = line;
+                string[] numbers = text.Split(' ');
+                foreach (var s in numbers)
+                {
+                    tab.Add(s);
+                }
+
+                if (tab[0] == "+")
+                Console.WriteLine(Convert.ToInt32(tab[1]) + Convert.ToInt32(tab[2]));
+                else if (tab[0] == "-")
+                    Console.WriteLine(Convert.ToInt32(tab[1]) - Convert.ToInt32(tab[2]));
+                else if (tab[0] == "*")
+                    Console.WriteLine(Convert.ToInt32(tab[1]) * Convert.ToInt32(tab[2]));
+                else if (tab[0] == "/")
+                    Console.WriteLine(Convert.ToInt32(tab[1]) / Convert.ToInt32(tab[2]));
+                else if (tab[0] == "%")
+                    Console.WriteLine(Convert.ToInt32(tab[1]) % Convert.ToInt32(tab[2]));
+
+            //    //na ideone nie działa bo nie ma referencji
+            //    //DataTable dataTable = new DataTable();
+            //    //double x = Math.Floor(Convert.ToDouble(dataTable.Compute($"{tab[1]}{tab[0]}{tab[2]}", "")));
+            //    //Console.WriteLine(Convert.ToInt32(x));
+            }
+            //test - działa
+            int t = Convert.ToInt16(Console.ReadLine());
+            for (int i = 0; i < t; i++)
+            {
+                List<string> tab = new List<string>();
+                string text = Console.ReadLine();
+                string[] numbers = text.Split(' ');
+                foreach (var s in numbers)
+                {
+                    tab.Add(s);
+                }
+                DataTable dataTable = new DataTable();
+                double x = Math.Floor(Convert.ToDouble(dataTable.Compute($"{tab[1]}{tab[0]}{tab[2]}", "")));
+                Console.WriteLine(Convert.ToInt32(x));
+            }
+        }
         public static void ID1139()
         {
             int t = Convert.ToInt16(Console.ReadLine());
