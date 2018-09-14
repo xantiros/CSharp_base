@@ -7,6 +7,19 @@ namespace CSharp_base
 {
     public static class Excercises
     {
+        public static void ID1139()
+        {
+            int t = Convert.ToInt16(Console.ReadLine());
+            for (int i = 0; i < t; i++)
+            {
+                int x = Convert.ToInt32(Console.ReadLine());
+                if (x < 1 || x > 1000)
+                    Console.WriteLine();
+                else
+                    Console.WriteLine(x * x);
+            }
+        }
+
         public static void ID968()
         {
             int suma = 0;
