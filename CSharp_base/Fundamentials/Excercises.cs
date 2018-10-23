@@ -8,6 +8,33 @@ namespace CSharp_base
 {
     public static class Excercises
     {
+        public static void ID723()
+        {
+            int t = Convert.ToInt16(Console.ReadLine());
+            for (int i = 0; i < t; i++)
+            {
+                
+                List<int> tab = new List<int>();
+                string text = Console.ReadLine();
+                string[] numbers = text.Split(' ');
+                foreach (string s in numbers)
+                {
+                    tab.Add(Convert.ToInt32(s));
+                }
+                int n = tab[0];
+                tab.Remove(tab[0]);
+                int x = tab[0];
+                tab.Remove(tab[0]);
+                tab.Add(x);
+
+                foreach (var item in tab)
+                {
+                    Console.Write(item + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+
         public static void ID568()
         {
             int t = Convert.ToInt16(Console.ReadLine());
