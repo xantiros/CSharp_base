@@ -8,6 +8,39 @@ namespace CSharp_base
 {
     public static class Excercises
     {
+        public static void ID568()
+        {
+            int t = Convert.ToInt16(Console.ReadLine());
+            for (int i = 0; i < t; i++)
+            {
+
+                int number = Convert.ToInt32(Console.ReadLine());
+                int reverse, licznik = 0, pamiec, tmp;
+
+                do
+                {
+                    tmp = number;
+                    reverse = 0;
+
+                    while (number > 0)
+                    {
+                        pamiec = number % 10;
+                        reverse = reverse * 10 + pamiec;
+                        number /= 10;
+                    }
+                    if (tmp == reverse)
+                    {
+                        Console.WriteLine(tmp + " " + licznik);
+                        break;
+                    }
+                    //
+                    number = tmp + reverse;
+                    licznik++;
+
+                } while (true);
+            }
+        }
+        
         public static void ID997()
         {
             string line;
